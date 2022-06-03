@@ -1,0 +1,287 @@
+/*Navbar*/
+
+
+nav {
+    width: 100%;
+     background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+    height: 44px;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    position: fixed;
+    overflow-y: hidden;
+    z-index:1;
+    padding-bottom: 8px;   
+    max-width: 1200px; 
+    margin-top: -12px;
+}
+
+nav .menu {
+    padding: 0;
+    left: 40%;
+    margin-top: 12px;
+}
+
+nav .logo {
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    margin-left: 1%;
+    width: 36px;
+    height: 30px;
+    right: 100px;
+    border-radius: 100px;
+    background-position: center;
+    
+}
+
+nav .text-logo {
+    color: #70ffde;
+    font-size: 1.5em;
+    margin:  0 auto;
+    margin-top: 3%;
+    margin-left: 41%;
+}
+#chechbox-span {
+    margin: 0 20px;
+    left: 0; 
+    
+}
+
+nav .menu ul {
+    
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    top: 44px;
+    right: 0px;
+    width: 0px;
+    height: 224px;
+    padding-left: 0px;
+    padding-top: 16px;
+    overflow: hidden;
+    background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+    list-style-type: none;
+    transition: width 0.3s ease-out;
+    z-index: 1;
+    position: fixed;
+   
+    
+}
+
+nav .menu ul li {
+    position: relative;
+    margin-left: 16px;
+    margin-bottom: 15px;
+    
+}
+
+nav .menu ul li a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 24px;
+    font-family: "IBM Plex Mono", monospace;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+
+nav .menu ul li a:hover {
+    color: #00F3BB;
+    text-decoration: line-through;
+}
+
+nav .menu ul li a:active {
+    color: rgba(6, 10, 36, 0.56);
+}
+
+nav .menu input {
+    display: none;
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    transform: scale(1.5);
+}
+
+nav .menu span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    position: relative;
+    background-color: #000000;
+    z-index: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+nav .menu .span1 {
+    transform-origin: 10% 0%;
+    margin-bottom: 3px;
+}
+
+nav .menu .span2 {
+    margin-bottom: 3px;
+}
+
+nav .menu .span3 {
+    transform-origin: 10% 100%;
+}
+
+nav .menu input:checked~ul {
+    width: 100%;
+    transition: width 0.3s ease-out;
+    margin-left: 4.5%;
+}
+
+nav .menu input:checked~label .span1 {
+    opacity: 1;
+    transform: rotate(45deg);
+    background-color: #000000;
+}
+
+nav .menu input:checked~label .span2 {
+    opacity: 0;
+}
+
+nav .menu input:checked~label .span3 {
+    opacity: 1;
+    transform: rotate(-45deg);
+    background-color: #000000;
+}
+
+
+/*-->MEDIAQUERY NAV<--*/
+
+
+@media screen and (min-width: 768px) {
+    nav {
+        position: fixed;
+        z-index: 1;
+        height: 80px;
+    }
+    nav .menu {
+        left: 8%;
+    position: relative;        
+    }
+    nav .logo {
+        width: 36px;
+        height: 36px;
+
+    }
+    
+    nav .text-logo {
+        position: absolute;
+        margin-left: -70%;
+        margin-bottom: 4%;
+        color: #70ffde;
+        font-size: 2.3em;
+       display: none;
+   }
+
+
+    nav .menu ul {
+        background: #70ffde;
+        position: relative;
+        flex-direction: row;
+        width: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        overflow: hidden;
+        background-color: unset;
+        height: unset;
+        
+        
+
+    }
+
+
+
+    nav .menu ul li {
+        
+        padding-top: 0;
+        margin-left: 48px;
+    }
+
+    nav .menu ul li a {
+        color: #060A24;
+
+    }
+
+    nav .menu input {
+        display: none;
+    }
+
+    nav .menu span {
+        display: none;
+    }
+
+    #switch {
+        left: 0;
+    }
+    
+   
+   
+}
+
+@media (min-width:1440px) {
+    
+    nav {
+        width: 120%;
+    }
+    nav .menu ul li a{
+        font-size: 1.5em;
+    }
+
+    nav .logo {
+        margin-left: 10px;
+    }
+    nav .menu {
+        margin-right: 20%;
+        
+    } 
+    
+
+     #switch {
+         position: absolute;
+        left: 59%;
+        margin-top: 2.3%;
+        
+    } 
+    
+
+}
+
+@media (min-width:1920px) {
+    nav .menu ul {
+        display: flex;
+    }
+    nav .menu ul li {
+        margin-left: 120px;
+        
+    }
+    nav .menu ul li a{
+        padding: 30px;
+        font-size: 1.5em;
+        
+    }
+}
+
+/* 
+@media screen and (min-width: 1000px) {
+    nav {
+        margin-left: 100px
+    }
+} */
+
+
+@media(min-width: 1920px) {
+    nav .menu ul li{
+        margin-left: 2%;
+    }
+
+}

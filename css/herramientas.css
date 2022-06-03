@@ -1,0 +1,224 @@
+/*?PSEUDOCLASES PARA ACCEDER A ELEMENTOS*/
+
+/*
+TODO:
+* :active nos permite cambiar el estilo del enlace cuando le damos click
+
+* :link: nos permite cambiar el estado del enlace cuando no hayamos entrado
+
+* :visited con esta pseudoclase queda marcada al tocarla, nosotros podemos decirle al cliente que ya visitó el enlace 
+
+
+* hover: cuando pasamos el cursor sobre el enalce
+
+
+? :first-child / :last-child
+
+Estas pseudoclases nos permiten acceder ya sea, al primer parrafo o ultimo parrafo, entonces con esto nos ahorrariamos tiempo de agregar clases en html
+
+? :first-of-type / :last-of-type (ELEMENTOS)
+
+Esta pseudoclase nos permite entrar a un contenedor y si hay varios elementos, (div, span, p, etc) vos le indicas cual queres seleccionar ya sea el primero o ultimo.
+
+
+? :nth-child() {} lleva parentesis porque es una función 
+
+Que pasa si nosotros tenemos por ejemplo una lista de opciones y queremos acceder a la opcion n4 pero todas esas opciones son elementos de una lista, por lo tanto todas son la misma. 
+Lo que nos permite es basicamente decirle a cual elemento queremos que le aplice estilos css
+*
+.lista :nth-child(3) { }
+    selecciona el elemento 3
+
+
+*
+.lista :nth-child(event) { }
+selecciona los elementos pares
+
+*
+.lista :nth-child(3n) { }
+    cada tercer elemento tiene un estilo
+
+
+
+
+!---------------------------LAST nth-last-child(){}------------------------
+
+*
+.lista :nth-last-child(3) {} 
+cuenta al reves, de la ultima a la primera) 
+
+!------------------nth-of-type{}-----------------------
+
+*
+.lista2 p:nth-of-type(2) {} 
+esta funcion lo que hace es acceder dentro de un listado y seleccionar directamente la etiqueta, en este caso es el segundo parrafo.
+    
+
+
+*
+.lista2 div:nth-last-of-type(){} 
+busca el div pero en el orden inverso
+
+
+
+!----------------only-child---------------------------
+
+*
+p:only-child
+lo que nos va a permitir es aplicarle estilos css a un elemento pero solamente si este elemento es el unico hijo de una lista o un contenedor
+
+*
+p:only-of-type
+esto significa que se va a aplicar solamente si es el unico elemento de un tipo
+
+selecciona los estilos pero a lo que vos le indiques, en este caso a los parrafos, y selecciona a uno solo porque hay 4 div y un p
+
+*/
+
+
+/*!----------------------PSEUDOCLASES FORMULARIO----------------------------
+
+-formulario .nombre:focus {
+    border: 1px solid black;
+} 
+cuando le hagan un focus o le den un click al input del formulario, va a tener un border y el usuario va a saber que se encuentra dentro trabajando o escribiendo
+
+-----------------------------------------------------------------------------------------------------------------
+*
+.formulario .id:disabled {}
+desabilita un elemento pero si lo que nos permite es acceder a un elemento de formulario cuando este se encuentra deshabilitado y cambiar el estilo.
+
+-----------------------------------------------------------------------------------------------------------------
+ESTO TAMBIEN HAY QUE VALIDARLO CON JAVASCRIPT DEL LADO DEL SERVIDOR
+
+:valid / :invalid esto lo que nos permite es acceder al estado de un elemento de formulario cuando tiene un valor válido e inválido
+
+.formulario .correo:invalid { 
+    background-color: rojo;
+}
+si es invalido, al usuario le va a aparecer en color rojo que no es un correo
+
+
+.formulario .correo:valid { si todo está bien escrito, que es un correo, va a tomarlo en verde 
+    background-color: verde;
+}
+
+-----------------------------------------------------------------------------------------------------------------
+REQUIRED
+
+el required tambien lo podriamos haber usado arriba, en correo, que es algo requerido, el usuario no puede dejar el espacio en blanco o no escribir nada
+
+.formulario .mensaje:required {
+    background: yellow;
+    border:none;
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+.formulario .radio input:checked { (no olvidar que el radio es la class del div que contiene el label y el input
+    box-shadow: 0px 0px 10px 1px blue;
+}
+Los de tipo checked lo que hace es que a un checkbox al darle un click, podemos definirle un estilo, como un sombreado por ejemplo-
+
+
+-----------------------------------------------------------------------------------------------------------------
+<div class="grupo>
+    <label>:default</label>
+    <div class="checkbox">
+        <label><input type="radio" name="opcion" id="1">Opción1</label>
+            <label><input type="radio" name="opcion" id="2" checked>Opción2</label> //el checked está aca para que marque a penas se abra la pagina, un valor marcado por defecto
+                <label><input type="radio" name="opcion" id="3">Opción3</label>
+    </div>
+</div>
+
+
+.formulario .checkbox input:default {
+    box-shadow: 0px 0x 10px 1px orange;
+}
+
+si entramos a la página se ve como el circulo tiene un sombreado color naranja.
+
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+<div class="grupo">
+    <label>:in-range</label>
+    <input class="edad" type="number" placeholder="101" min="1" max="100" value="1"> //importante que el type sea de tipo numero para que funcione
+
+ EL USUARIO VA A TENER UN LIMITE DE EDAD, NO VA A PODER PONER CUALQUIERA
+
+
+
+ .formulario .edad:out-of-range {
+   
+    background: red;
+    border:none; 
+}
+Le hacemos saber al usuario que si pone un numero inválido, le va a salir un background color rojo 
+
+
+
+
+
+
+----->mediaquerys<------
+
+orientation: landscape
+nos referimos a horizontal
+el ancho es mayor al alto con que sea 1 px mayor al alto
+
+portrait
+
+cuando el ancho es menor que el alto
+
+
+
+la unidad 'em' es relativa al tamaño fuente del elemento
+entonces si el elemento tiene font-size: 20px , entonces yo le pongo por ejemplo que el padding superior e inferior sea de 0.5em y el padding izquierdo y derecho va a ser de  1em
+
+0.5 em (seria la mitad del tamaño de fuente, entonces seria 10px de padding superior e inferior y 20 px de padding de izquierda y derecha
+la ventaja de esto es que si cambiamos el tamaño el tamaño de fuente, los padding son relativos a ese tamaño de fuente..
+
+
+:hover filter: brightness(130%)
+
+
+
+
+//HERRAMIENTAS PARA BUSQUEDAS DE GOOGLE
+
+
+OPERADORES PARA OBTENER RESULTADOS DIFERENTES
+
+COMIDAS RESTAURANTE -PLATOS (NO APARECEN PLATOS)
+
+AC DC || AIRBAR (APARECEN SOLAMENTE DE ELLOS DOS)
+
+*DALTO O CUALQUIER OTRO NOMBRE (NOS VA A APARECER INFORMACION MAS BUSCADA SOBRE EL NOMBRE
+
+"YO TE QUIERO CERQUITA DE MI " (EN ESTE CASO LO QUE HACE ES BUSCAR TAL CUAL COMO ESTÁ EN LAS COMILLAS
+
+
+~Programadores mas exitosos (encuentra sinonimos relacionados a la busqueda)
+
+... (lo que hace es hacer una busqueda especifica,  personas con edad de 15...19 (estaria encontrando solamente de los 15 a los 19 años de edad.
+
+
+site:www.reddit.com payaso (lo que hace es encontrar algo especifico dentro de esa pagina web
+
+
+
+UNIDADES DE MEDIDA EN CSS (Px, Porcentajes, Em y Rem)
+
+Al usar pixeles para definir las dimensiones de los objetos y los estilos de fuente no solo estamos definiendo tamaños rígidos, sino que también estamos ignorando las configuraciones que cada usuario pueda tener en su navegador
+
+
+
+
+Unidades de medida recomendadas
+Ok, ya ha quedado claro el por qué no es una buena idea usar los pixeles como unidad de medida para el diseño web pero entonces ¿Cuál es la alternativa?
+
+Me gustaría recomendarte 3 unidades de medida en CSS que son las que creo se deberían usar en el diseño web actual y explicarte (en términos generales) en qué circunstancias deberíamos usar cada una de ellas:
+
+*/

@@ -1,0 +1,39 @@
+/* 
+
+
+.contenedor-texto .mascota {
+     font-weight: bold;
+     color: #c99806;
+     font-style: normal;
+}
+
+.contenedor-texto p {
+     margin-bottom: 40px;
+     line-height: 36px;
+}
+
+.btn-link {
+     display: inline-block;
+     padding: 10px 30px;
+	border-radius: 100px;
+     margin-right: 10px;
+     text-decoration: none;
+     background: #f2f2f2;
+}
+
+.btn-link:hover,
+.btn-link.activo {
+	color: #fff;
+	background: #5b4a9a;
+}
+
+@media screen and (max-width: 915px) {
+     main {
+          flex-direction: column;
+          text-align: center;
+     }
+
+     main .contenedor-img {
+          margin-bottom: 40px;
+     }
+} */

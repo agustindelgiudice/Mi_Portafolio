@@ -1,0 +1,234 @@
+
+.banner-contenedor {
+    height: auto;
+    width: 100%;
+    /* border: 1px solid black; */
+    margin-bottom: 100px;
+    margin-top: 100px;
+    border-radius: 50px;
+    position: relative;
+}
+
+
+
+.banner_title .banner_img { /*!BACKGROUND*/
+    display: block;
+    position:relative;
+    border-radius: 50px;
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(-30deg, #f9f9f9 50%, #1372ed 70%);
+    height: 70vh;
+    width: 95%;
+   
+}
+
+
+.banner-contenedor img { /*!IMAGEN*/
+    /* max-width: 40vw;
+margin-left: calc(70% - 24vw); */
+    position:absolute;
+    top: 20%;
+    left: 5%;
+     width: 90%;
+     height: 40vh;
+     display: block;
+     margin: 0 auto;
+     border-radius: 50px;
+     max-width: 1000px;
+     object-fit: cover; 
+ }
+
+
+ /*!LOGOS*/
+
+ .banner-contenedor .banner_img .logo-html {
+     position: absolute;
+    display: block;
+     /* width: 30%; */
+     border: none;
+     border-radius: 0;
+     height: auto;
+     margin: 10px 150px;
+    /* border: 1px solid black; */
+    max-width: 90px;
+}
+
+.banner-contenedor .banner_img .logo-css {
+    /* display: none; */
+    width: 30%;
+    border: none;
+    border-radius: 0;
+    height: auto;
+   max-width: 70px;
+    margin: 80px 20px;
+
+}
+
+.banner-contenedor .banner_img .logo-javascript {
+    /* display: none; */
+    width: 30%;
+    border: none;
+    border-radius: 0;
+    height: auto;
+   max-width: 80px;
+    margin: 220px 50px;
+
+}
+
+.banner-contenedor .banner_img .logo-nodejs{
+    /* display: none; */
+    width: 30%;
+    border: none;
+    border-radius: 0;
+    height: auto;
+   max-width: 100px;
+    margin: 150px 180px;
+
+}
+/*ESCRITURA*/
+
+
+.banner-contenedor .banner_title .titulo {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 6%;
+    line-height: 1;
+    overflow-y: hidden;
+    margin-left: 50px;
+    color: rgb(252, 252, 252);
+    font-size: 2.5em;
+    max-width: 1000px;
+}
+
+
+
+
+
+.banner-contenedor .banner_title span {
+    font-weight: 400;
+    display: inline-block;
+    max-width: 476px;
+    text-transform: capitalize;
+    font-family: 'Popins', sans-serif;
+    font-size: 2em;
+    font-weight: 800;
+    color: rgb(131, 137, 216);
+    position: absolute;
+    top: 22%;
+    left: 40px;
+}
+
+
+.burbuja {
+    width: 80px;
+    border-radius: 50%;
+    height: 80px;
+    background: rgb(12, 226, 173);
+    opacity: .3;
+    position: absolute;
+    bottom: -150;
+    
+    
+
+    animation: burbujas 3s linear infinite;
+}
+
+
+.burbuja:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+}
+
+.burbuja:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    left: 34%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(3) {
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 1.5s;
+    animation-delay: 7s;
+}
+
+
+.burbuja:nth-child(4) {
+    width: 50px;
+    height:50px;
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(5) {
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.burbuja:nth-child(6) {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(7) {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(8) {
+    width: 100px;
+    height: 100px;
+    left: 52%;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(9) {
+    width: 65px;
+    height: 65px;
+    left: 51%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
+.burbuja:nth-child(10) {
+    width: 40px;
+    height: 40px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 4s;
+}
+
+    @keyframes burbujas {
+        0% {
+            bottom: 0;
+            opacity:0;
+        }
+        50% {
+            opacity: .2;
+            
+        }
+        100%{
+            bottom:100vh;
+            opacity: 0;
+        }
+    }

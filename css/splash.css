@@ -1,0 +1,104 @@
+header {
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 80px;
+
+}
+
+header h4 {
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+
+/*!SPLASH SCREEN*/
+
+
+
+.intro {
+
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+    background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+
+    /* background: url('../img/bg-splash-20.jpeg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* display: flex;
+    align-items: center; */
+} 
+
+.logo-header {
+
+    overflow-y: hidden;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    /* height: 100px; */
+   
+}
+
+
+
+
+
+ .logo-splash {
+    width: 100%;
+	color: transparent;
+	text-align: center;
+	/* text-transform: uppercase; */
+	color: transparent;
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+    font-size: 2em;
+    font-family: 'Antom', sans-serif;
+    text-align: center;
+    /* text-transform: uppercase; */
+    font-weight: bold;
+    font-size: 3em;
+	font-weight: bold;
+
+	background-image: url('../img/bg-text.jpeg');
+	background-size: cover;
+	background-position-y: 700px;
+	
+	background-clip: text;
+	-webkit-background-clip: text;
+
+	-webkit-text-fill-color: transparent;
+}
+
+
+#splash-2 {
+    font-size: 0.5em;
+}
+
+
+.active2 {
+   
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+
+
+}
